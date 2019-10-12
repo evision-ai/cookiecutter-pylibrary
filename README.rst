@@ -118,6 +118,24 @@ You will be asked for these fields:
 
         Can be set in your ``~/.cookiecutterrc`` config file.
 
+    * - ``package_namespace``
+      - .. code:: python
+
+            "evision"
+      - Python package namespace name (whatever you would import).
+
+    * - ``package_name``
+      - .. code:: python
+
+            "lib"
+      - Python package name (whatever you would import).
+
+    * - ``project_name``
+      - .. code:: python
+
+            "Nameless"
+      - Verbose project name, used in headings (docs, readme, etc).
+
     * - ``repo_username``
       - .. code:: python
 
@@ -125,12 +143,6 @@ You will be asked for these fields:
       - GitHub user name of this project (used for GitHub link).
 
         Can be set in your ``~/.cookiecutterrc`` config file.
-
-    * - ``project_name``
-      - .. code:: python
-
-            "Nameless"
-      - Verbose project name, used in headings (docs, readme, etc).
 
     * - ``repo_hosting_domain``
       - .. code:: python
@@ -144,12 +156,6 @@ You will be asked for these fields:
 
             "python-nameless"
       - Repository name on GitHub (and project's root directory name).
-
-    * - ``package_name``
-      - .. code:: python
-
-            "nameless"
-      - Python package name (whatever you would import).
 
     * - ``distribution_name``
       - .. code:: python
