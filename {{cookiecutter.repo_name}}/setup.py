@@ -26,7 +26,7 @@ from os.path import splitext
 {% if cookiecutter.c_extension_support not in ['no', 'cffi'] -%}
 from setuptools import Extension
 {% endif -%}
-from setuptools import find_packages
+from setuptools import find_namespace_packages
 from setuptools import setup
 {%- if cookiecutter.c_extension_support != 'no' -%}
 {%- if cookiecutter.c_extension_optional == 'yes' %}
@@ -118,7 +118,7 @@ setup(
 {%- else %}
     url='https://{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}',
 {%- endif %}
-    packages=find_packages('src'),
+    packages=find_namespace_packages('src', include=['argus.*', 'evision.*']),
     package_dir={'': 'src'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
     include_package_data=True,
@@ -141,9 +141,7 @@ setup(
         'Operating System :: POSIX',
         'Operating System :: Microsoft :: Windows',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
@@ -172,7 +170,7 @@ setup(
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
+    python_requires='!=2.*, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.5.*',
     install_requires=[
 {%- if cookiecutter.command_line_interface == 'click' %}
         'click',
