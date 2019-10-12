@@ -2,20 +2,20 @@
 from click.testing import CliRunner
 {% endif %}
 {%- if cookiecutter.c_extension_support != 'no' %}
-from {{ cookiecutter.package_name }} import {{ cookiecutter.c_extension_function }}
+from {{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }} import {{ cookiecutter.c_extension_function }}
 {%- endif %}
 {%- if cookiecutter.command_line_interface != 'no' %}
-from {{ cookiecutter.package_name }}.cli import main
+from {{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }}.cli import main
 {%- endif %}
 {%- if cookiecutter.test_matrix_configurator == 'yes' and cookiecutter.test_matrix_configurator == 'no' or
        cookiecutter.command_line_interface == 'no' %}
-from {{ cookiecutter.package_name }} import main
+from {{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }} import main
 {%- endif %}
 
 
 def test_main():
 {%- if cookiecutter.test_matrix_configurator == 'yes' and cookiecutter.test_matrix_configurator == 'no' %}
-    assert 'site-packages' in {{ cookiecutter.package_name }}.__file__
+    assert 'site-packages' in {{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }}.__file__
 {%- endif %}
 {%- if cookiecutter.command_line_interface == 'click' %}
     runner = CliRunner()

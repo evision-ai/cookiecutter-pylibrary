@@ -81,7 +81,7 @@ static struct PyMethodDef module_functions[] = {
 #if PY_MAJOR_VERSION >= 3
 static struct PyModuleDef moduledef = {
     PyModuleDef_HEAD_INIT,
-    "{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_module }}", /* m_name */
+    "{{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_module }}", /* m_name */
     NULL,             /* m_doc */
     -1,               /* m_size */
     module_functions, /* m_methods */
@@ -98,7 +98,7 @@ static PyObject* moduleinit(void) {
 #if PY_MAJOR_VERSION >= 3
     module = PyModule_Create(&moduledef);
 #else
-    module = Py_InitModule3("{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_module }}", module_functions, NULL);
+    module = Py_InitModule3("{{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_module }}", module_functions, NULL);
 #endif
 
     if (module == NULL)

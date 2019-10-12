@@ -9,7 +9,7 @@ ffi.cdef('''
 ''')
 
 ffi.set_source(
-    '{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_module }}',
+    '{{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_module }}',
     open(join(dirname(__file__), '{{ cookiecutter.c_extension_module }}.c')).read()
 )
 

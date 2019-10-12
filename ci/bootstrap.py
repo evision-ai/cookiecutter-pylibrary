@@ -46,8 +46,9 @@ if __name__ == "__main__":
 
     for (alias, conf) in matrix.from_file(join(base_path, "ci", "setup.cfg")).items():
         tox_environments[alias] = conf
-        conf['repo_name'] = 'python-nameless'
-        conf['package_name'] = 'nameless'
+        conf['repo_name'] = 'evision-lib'
+        conf['package_namespace'] = 'evision'
+        conf['package_name'] = 'lib'
         conf['c_extension_test_pypi_appveyor_secret'] = 'fDwCnDhQiptm9a4ZcFpgyQ=='
         conf['c_extension_test_pypi_travis_secret'] = ''
         conf['codacy'] = 'yes'

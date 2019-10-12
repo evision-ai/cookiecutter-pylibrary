@@ -143,8 +143,8 @@ To use the project:
 
 .. code-block:: python
 
-    import {{ cookiecutter.package_name }}
-    {{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_function }}()
+    import {{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}
+    {{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_function }}()
 {% endif %}
 
 Development

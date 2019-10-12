@@ -1,5 +1,5 @@
 """
-Entrypoint module, in case you use `python -m {{cookiecutter.package_name}}`.
+Entrypoint module, in case you use `python -m {{cookiecutter.package_namespace}}.{{cookiecutter.package_name}}`.
 
 
 Why does this file exist, and why __main__? For more info, read:
@@ -11,7 +11,7 @@ Why does this file exist, and why __main__? For more info, read:
 {%- if cookiecutter.command_line_interface == 'plain' %}
 import sys
 {% endif %}
-from {{cookiecutter.package_name}}.cli import main
+from {{cookiecutter.package_namespace}}.{{cookiecutter.package_name}}.cli import main
 
 if __name__ == "__main__":
 {%- if cookiecutter.command_line_interface == 'plain' %}

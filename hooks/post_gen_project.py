@@ -62,7 +62,7 @@ if __name__ == "__main__":
     os.unlink(join('ci', 'templates', 'tox.ini'))
 {% endif %}
 {%- if cookiecutter.allow_tests_inside_package == 'no' %}
-    shutil.rmtree(join('src', '{{ cookiecutter.package_name }}', 'tests'))
+    shutil.rmtree(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', 'tests'))
 {% endif %}
 
 {%- if cookiecutter.c_extension_support == 'no' %}
@@ -178,7 +178,7 @@ NOTE:
     while command_line_interface_bin_name.endswith('.py'):
         command_line_interface_bin_name = command_line_interface_bin_name[:-3]
 
-        if command_line_interface_bin_name == '{{ cookiecutter.package_name }}':
+        if command_line_interface_bin_name == '{{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}':
             warn("""
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                                                                            !!

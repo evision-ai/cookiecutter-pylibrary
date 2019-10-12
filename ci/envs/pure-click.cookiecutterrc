@@ -13,11 +13,11 @@ default_context:
   coveralls_token: IoRlAEvnKbwbhBJ2jrWPqzAnE2jobA0I3
   full_name: "Ion\"'el Cristian M\u0103rie\u0219"
   landscape: 'yes'
-  linter: flake8
-  package_name: nameless
-  project_name: "Nam\xE9\"'less"
+  package_namespace: evision
+  package_name: lib
+  project_name: "eVision Library"
   repo_hosting_domain: github.com
-  repo_name: python-nameless
+  repo_name: evision-lib
   requiresio: 'yes'
   scrutinizer: 'yes'
   setup_py_uses_setuptools_scm: 'no'

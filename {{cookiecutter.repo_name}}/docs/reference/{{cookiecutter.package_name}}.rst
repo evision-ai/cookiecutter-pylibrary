@@ -1,9 +1,9 @@
-{{ cookiecutter.package_name }}
+{{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }}
 {{ "=" * cookiecutter.package_name|length }}
 
 .. testsetup::
 
-    from {{ cookiecutter.package_name }} import *
+    from {{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }} import *
 
-.. automodule:: {{ cookiecutter.package_name }}
+.. automodule:: {{cookiecutter.package_namespace}}.{{ cookiecutter.package_name }}
     :members:

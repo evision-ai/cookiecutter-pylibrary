@@ -15,7 +15,7 @@ default_context:
   landscape: 'yes'
   linter: flake8
   package_name: nameless
-  project_name: "Nam\xE9\"'less"
+  project_name: "eVision Library"
   repo_hosting_domain: github.com
   repo_name: python-nameless
   requiresio: 'yes'
