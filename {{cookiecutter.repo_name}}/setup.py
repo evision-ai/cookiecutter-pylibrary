@@ -91,7 +91,7 @@ setup(
 {%- if cookiecutter.setup_py_uses_setuptools_scm == 'yes' %}
     use_scm_version={
         'local_scheme': 'dirty-tag',
-        'write_to': 'src/{{ cookiecutter.package_name }}/_version.py',
+        'write_to': 'src/{{ cookiecutter.package_namespace }}/{{ cookiecutter.package_name }}/_version.py',
         'fallback_version': '{{ cookiecutter.version }}',
     },
 {%- else %}
@@ -118,7 +118,7 @@ setup(
 {%- else %}
     url='https://{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}',
 {%- endif %}
-    packages=find_namespace_packages('src', include=['argus.*', 'evision.*']),
+    packages=find_namespace_packages('src', include=['{{ cookiecutter.package_namespace }}.*']),
     package_dir={'': 'src'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
     include_package_data=True,
@@ -211,7 +211,7 @@ setup(
 {%- if cookiecutter.command_line_interface != 'no' %}
     entry_points={
         'console_scripts': [
-            '{{ cookiecutter.command_line_interface_bin_name }} = {{ cookiecutter.package_name }}.cli:main',
+            '{{ cookiecutter.command_line_interface_bin_name }} = {{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}.cli:main',
         ]
     },
 {%- endif %}
