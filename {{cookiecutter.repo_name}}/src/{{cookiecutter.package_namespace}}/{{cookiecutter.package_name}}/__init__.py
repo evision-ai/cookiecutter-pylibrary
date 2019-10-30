@@ -14,5 +14,5 @@ def {{ cookiecutter.c_extension_function }}(args):
         return _ffi.string(result)
 {%- elif cookiecutter.c_extension_support != 'no' %}
 
-from .{{ cookiecutter.c_extension_module }} import {{ cookiecutter.c_extension_function }}  # noqa
+from {{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_module }} import {{ cookiecutter.c_extension_function }}  # noqa
 {%- endif %}
