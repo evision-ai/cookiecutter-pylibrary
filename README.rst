@@ -79,7 +79,7 @@ This template is more involved than the regular `cookiecutter-pypackage
 
 First generate your project::
 
-  cookiecutter gh:ionelmc/cookiecutter-pylibrary
+  cookiecutter gh:evision-ai/cookiecutter-pylibrary
 
 You will be asked for these fields:
 
