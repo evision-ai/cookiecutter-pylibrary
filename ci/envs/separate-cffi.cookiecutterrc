@@ -17,7 +17,6 @@ default_context:
   project_name: eVision Library
   repo_hosting_domain: github.com
   repo_name: evision-lib
-  scrutinizer: 'yes'
   setup_py_uses_setuptools_scm: 'no'
   setup_py_uses_test_runner: 'yes'
   sphinx_docs: 'no'

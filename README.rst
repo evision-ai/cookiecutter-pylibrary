@@ -300,12 +300,6 @@ You will be asked for these fields:
             "no"
       - Add a Landscape_ badge in ``README.rst``.
 
-    * - ``scrutinizer``
-      - .. code:: python
-
-            "no"
-      - Add a Scrutinizer_ badge in ``README.rst``.
-
     * - ``codacy``
       - .. code:: python
 

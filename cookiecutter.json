@@ -40,7 +40,6 @@
     "coveralls_token": "[Required for Appveyor, take it from https://coveralls.io/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}]",
     "codecov": ["no", "yes"],
     "landscape": ["no", "yes"],
-    "scrutinizer": ["no", "yes"],
     "codacy" : ["no", "yes"],
     "codacy_projectid" : "[Get ID from https://app.codacy.com/app/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/settings]",
     "sphinx_docs": ["yes", "no"],
