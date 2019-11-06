@@ -97,15 +97,6 @@ setup(
 {%- else %}
     version='{{ cookiecutter.version }}',
 {%- endif %}
-{%- if cookiecutter.license != "no" %}
-    license='{{ {
-        "BSD 2-Clause License": "BSD-2-Clause",
-        "BSD 3-Clause License": "BSD-3-Clause",
-        "MIT license": "MIT",
-        "ISC license": "ISC",
-        "Apache Software License 2.0": "Apache-2.0"}[cookiecutter.license]
-    }}',
-{%- endif %}
     description={{ '{0!r}'.format(cookiecutter.project_short_description).lstrip('ub') }},
     long_description='%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
@@ -127,16 +118,6 @@ setup(
         # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
-{%- if cookiecutter.license == "no" %}
-{%- elif cookiecutter.license in ["BSD 2-Clause License", "BSD 3-Clause License"] %}
-        'License :: OSI Approved :: BSD License',
-{%- elif cookiecutter.license == "MIT license" %}
-        'License :: OSI Approved :: MIT License',
-{%- elif cookiecutter.license == "ISC license" %}
-        'License :: OSI Approved :: ISC License (ISCL)',
-{%- elif cookiecutter.license == "Apache Software License 2.0" %}
-        'License :: OSI Approved :: Apache Software License',
-{%- endif %}
         'Operating System :: Unix',
         'Operating System :: POSIX',
         'Operating System :: Microsoft :: Windows',
@@ -152,9 +133,7 @@ setup(
         # 'Programming Language :: Python :: Implementation :: Jython',
         # 'Programming Language :: Python :: Implementation :: Stackless',
         'Topic :: Utilities',
-{%- if cookiecutter.pypi_disable_upload == "yes" %}
-        'Private :: Do Not Upload',
-{%- endif %}
+        'Private :: Do Not Upload'
     ],
 {%- if cookiecutter.repo_hosting_domain != "no" %}
     project_urls={

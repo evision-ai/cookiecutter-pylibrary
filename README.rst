@@ -23,7 +23,6 @@ Features
 
 This is an "all inclusive" sort of template.
 
-* Choice of various licenses.
 * Tox_ for managing test environments for Python 2.7, 3.3, PyPy etc.
 * Pytest_ or Nose_ for testing Python 2.7, 3.3, PyPy etc.
 * *Optional* support for creating a tests matrix out of dependencies and python versions.
@@ -267,19 +266,6 @@ You will be asked for these fields:
             "nameless"
       - Name of the CLI bin/executable file (set the console script name in ``setup.py``).
 
-    * - ``license``
-      - .. code:: python
-
-            "BSD license"
-      - License to use. Available options:
-
-        * BSD license
-        * MIT license
-        * ISC license
-        * Apache Software License 2.0
-
-        What license to pick? https://choosealicense.com/
-
     * - ``sphinx_docs``
       - .. code:: python
 
@@ -312,21 +298,6 @@ You will be asked for these fields:
       - Leave as default if your documentation will be hosted on readthedocs.
         If your documentation will be hosted elsewhere (such as GitHub Pages or GitLab Pages),
         enter the top-level URL.
-
-    * - ``pypi_badge``
-      - .. code:: python
-
-            "yes"
-      - By default, this will insert links to your project's page on PyPI.org.
-        Note that if your package is not (yet) on PyPI, this will cause tox -e docs to fail.
-        If you choose "no", then these links will not be created.
-
-    * - ``pypi_disable_upload``
-      - .. code:: python
-
-            "no"
-      - If you specifically want to be sure your package will never be
-        accidentally uploaded to PyPI, you can pick "yes".
 
 
 The testing (``tox.ini``) configuration is generated from templates. For your convenience there's an

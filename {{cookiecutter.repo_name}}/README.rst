@@ -11,13 +11,6 @@ Overview
       - |docs|
 {%- endif %}
 {{ '' }}
-{%- if cookiecutter.pypi_badge == "yes" or cookiecutter.repo_hosting_domain == "github.com" %}
-    * - package
-      - {% if cookiecutter.pypi_badge == "yes" %}| |version| |wheel| |supported-versions| |supported-implementations|
-        {{ '' }}{% endif %}
-        {%- if cookiecutter.repo_hosting_domain == "github.com" %}| |commits-since|{% endif %}
-{%- endif %}
-{{ '' }}
 {%- if cookiecutter.sphinx_docs == "yes" -%}
 {%- if 'readthedocs' in cookiecutter.sphinx_docs_hosting -%}
 .. |docs| image:: https://readthedocs.org/projects/{{ cookiecutter.repo_name }}/badge/?style=flat
@@ -29,35 +22,10 @@ Overview
     :alt: Documentation Status
 {% endif %}
 {% endif %}
-{%- if cookiecutter.pypi_badge == "yes" %}
-.. |version| image:: https://img.shields.io/pypi/v/{{ cookiecutter.distribution_name }}.svg
-    :alt: PyPI Package latest release
-    :target: https://pypi.org/project/{{ cookiecutter.distribution_name }}
-
-.. |wheel| image:: https://img.shields.io/pypi/wheel/{{ cookiecutter.distribution_name }}.svg
-    :alt: PyPI Wheel
-    :target: https://pypi.org/project/{{ cookiecutter.distribution_name }}
-
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/{{ cookiecutter.distribution_name }}.svg
-    :alt: Supported versions
-    :target: https://pypi.org/project/{{ cookiecutter.distribution_name }}
-
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/{{ cookiecutter.distribution_name }}.svg
-    :alt: Supported implementations
-    :target: https://pypi.org/project/{{ cookiecutter.distribution_name }}
-{% endif %}
-{%- if cookiecutter.repo_hosting_domain == "github.com" %}
-.. |commits-since| image:: https://img.shields.io/github/commits-since/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/v{{ cookiecutter.version }}.svg
-    :alt: Commits since latest release
-    :target: https://{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/compare/v{{ cookiecutter.version }}...master
-{% endif %}
 
 .. end-badges
 {% endif %}
 {{ cookiecutter.project_short_description|wordwrap(119) }}
-{% if cookiecutter.license != "no" %}
-* Free software: {{ cookiecutter.license }}
-{% endif %}
 Installation
 ============
 
