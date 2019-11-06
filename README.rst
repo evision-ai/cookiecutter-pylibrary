@@ -300,15 +300,6 @@ You will be asked for these fields:
             "no"
       - Add a Landscape_ badge in ``README.rst``.
 
-    * - ``codacy``
-      - .. code:: python
-
-            "no"
-      - Add a Codacy_ badge in ``README.rst``.
-
-        **Note:** After importing the project in Codacy, find the hexadecimal project ID from settings and replace it in badge URL
-
-
     * - ``sphinx_docs``
       - .. code:: python
 
@@ -512,5 +503,3 @@ If you have criticism or suggestions please open up an Issue or Pull Request.
 .. _bumpversion: https://pypi.org/project/bumpversion
 .. _Codecov: http://codecov.io/
 .. _Landscape: https://landscape.io/
-.. _Scrutinizer: https://scrutinizer-ci.com/
-.. _Codacy: https://codacy.com/
