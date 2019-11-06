@@ -2,15 +2,11 @@
 cookiecutter-pylibrary
 ======================
 
-Cookiecutter_ template for a Python python library. |travis| |appveyor|
+Cookiecutter_ template for a Python python library. |travis|
 
 .. |travis| image:: http://img.shields.io/travis/ionelmc/cookiecutter-pylibrary/master.svg?style=flat&label=Travis
     :alt: Travis-CI Build Status
     :target: https://travis-ci.org/ionelmc/cookiecutter-pylibrary
-
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/ionelmc/cookiecutter-pylibrary/master.svg?style=flat&label=AppVeyor
-    :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/ionelmc/cookiecutter-pylibrary
 
 *Notes*:
 
@@ -390,11 +386,6 @@ You will be asked for these fields:
         Python 2 and 3 will be used.
 
         You probably want to enable this if you use ``c_extension_test_pypi == 'yes'``.
-    * - ``appveyor``
-      - .. code:: python
-
-            "yes"
-      - If you want the AppVeyor_ badge and configuration.
 
 The testing (``tox.ini`` and ``.travis.yml``) configuration is generated from templates. For your convenience there's an
 initial bootstrap ``tox.ini``, to get the initial generation going just run::
@@ -546,7 +537,6 @@ If you have criticism or suggestions please open up an Issue or Pull Request.
 .. _ReadTheDocs: https://readthedocs.org/
 .. _Setuptools: https://pypi.org/project/setuptools
 .. _Pytest: http://pytest.org/
-.. _AppVeyor: http://www.appveyor.com/
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _Nose: http://nose.readthedocs.org/
 .. _isort: https://pypi.org/project/isort
@@ -556,4 +546,3 @@ If you have criticism or suggestions please open up an Issue or Pull Request.
 .. _Scrutinizer: https://scrutinizer-ci.com/
 .. _Codacy: https://codacy.com/
 .. _CodeClimate: https://codeclimate.com/
-.. _`requires.io`: https://requires.io/

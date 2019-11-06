@@ -83,15 +83,6 @@ if __name__ == "__main__":
     os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}_build.py'))
 {%- endif %}
 
-{%- if cookiecutter.appveyor == 'no' %}
-    os.unlink(join('ci', 'appveyor-with-compiler.cmd'))
-    os.unlink(join('ci', 'templates', '.appveyor.yml'))
-    unlink_if_exists('.appveyor.yml')
-{% endif %}
-    unlink_if_exists(join('ci', 'templates', 'appveyor.yml'))
-    unlink_if_exists('appveyor.yml')
-    unlink_if_exists(join('ci', 'appveyor-bootstrap.py'))
-
 {%- if cookiecutter.travis == 'no' %}
     os.unlink(join('ci', 'templates', '.travis.yml'))
     unlink_if_exists('.travis.yml')
@@ -149,9 +140,9 @@ if __name__ == "__main__":
         git push -u origin master
 
 {% if cookiecutter.test_matrix_configurator == "yes" %}
-    To regenerate your tox.ini, .travis.yml or .appveyor.yml run:
+    To regenerate your tox.ini, .travis.yml or run:
 {% else %}
-    To regenerate your .travis.yml or .appveyor.yml run:
+    To regenerate your .travis.yml run:
 {% endif %}
 
         tox -e bootstrap
@@ -169,7 +160,6 @@ NOTE:
     You are using the c_extension_test_pypi option.
 
     Make sure you are setting TWINE_PASSWORD as a secret env variable in CI settings:
-    - https://ci.appveyor.com/project/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/settings/environment
     - https://travis-ci.org/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/settings
 """)
 {%- endif %}

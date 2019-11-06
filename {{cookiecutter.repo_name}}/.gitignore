@@ -63,7 +63,6 @@ docs/_build
 .cache
 .pytest
 .bootstrap
-.appveyor.token
 *.bak
 
 # Mypy Cache

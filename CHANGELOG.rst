@@ -3,6 +3,11 @@ Changelog
 
 Use cookiecutter's ``--checkout`` options to use a specific version.
 
+slim-0.0.1 (2019-11-06)
+-----------------------
+
+* Remove usages of ``requiresio``, ``appveyor``
+
 v1.15 (2019-05-25)
 ------------------
 
