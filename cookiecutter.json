@@ -11,7 +11,6 @@
     "repo_username": "evision-ai",
     "distribution_name": "{{ cookiecutter.package_namespace|replace('_','-') }}-{{ cookiecutter.package_name|replace('_','-') }}",
     "project_short_description": "An example package. Generated with cookiecutter-pylibrary.",
-    "release_date": "today",
     "year_from": "2019",
     "year_to": "{% now 'utc+8', '%Y' %}",
     "version": "0.1.0",

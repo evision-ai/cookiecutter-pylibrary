@@ -155,12 +155,6 @@ You will be asked for these fields:
             "An example package [...]"
       - One line description of the project (used in ``README.rst`` and ``setup.py``).
 
-    * - ``release_date``
-      - .. code:: python
-
-            "today"
-      - Release date of the project (ISO 8601 format) default to today (used in ``CHANGELOG.rst``).
-
     * - ``year``
       - .. code:: python
 
