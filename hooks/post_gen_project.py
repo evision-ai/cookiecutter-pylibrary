@@ -84,10 +84,6 @@ if __name__ == "__main__":
     os.unlink('CONTRIBUTING.rst')
 {% endif %}
 
-{%- if cookiecutter.setup_py_uses_setuptools_scm == 'yes' %}
-    os.unlink('MANIFEST.in')
-{% endif %}
-
     print("""
 ################################################################################
 

@@ -222,14 +222,6 @@ You will be asked for these fields:
             "no"
       - Whether to use the test_runner for python setup.py test.
         Note that this will also add to ``setup_requires`` if a test-runner is needed.
-    * - ``setup_py_uses_setuptools_scm``
-      - .. code:: python
-
-            "no"
-      - Enables the use of `setuptools-scm <https://pypi.org/project/setuptools-scm/>`_. You can continue using
-        bumpversion_ with this enabled.
-
-        Recommended if you use ``c_extension_test_pypi == 'yes'`` as it will publish unique wheels for each commit.
 
     * - ``linter``
       - .. code:: python

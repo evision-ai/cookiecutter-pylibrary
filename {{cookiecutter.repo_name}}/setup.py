@@ -88,15 +88,7 @@ class optional_build_ext(build_ext):
 {% endif -%}
 setup(
     name='{{ cookiecutter.distribution_name }}',
-{%- if cookiecutter.setup_py_uses_setuptools_scm == 'yes' %}
-    use_scm_version={
-        'local_scheme': 'dirty-tag',
-        'write_to': 'src/{{ cookiecutter.package_namespace }}/{{ cookiecutter.package_name }}/_version.py',
-        'fallback_version': '{{ cookiecutter.version }}',
-    },
-{%- else %}
     version='{{ cookiecutter.version }}',
-{%- endif %}
     description={{ '{0!r}'.format(cookiecutter.project_short_description).lstrip('ub') }},
     long_description='%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
@@ -167,8 +159,6 @@ setup(
 {%- set setup_requires_interior %}
 {%- if cookiecutter.test_runner == 'pytest' and cookiecutter.setup_py_uses_test_runner == 'yes' %}
         'pytest-runner',{% endif %}
-{%- if cookiecutter.setup_py_uses_setuptools_scm == 'yes' %}
-        'setuptools_scm>=3.3.1',{% endif %}
 {%- endset %}
 {%- if cookiecutter.c_extension_support == 'cython' %}
     setup_requires=[{{ setup_requires_interior }}
