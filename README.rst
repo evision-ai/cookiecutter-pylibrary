@@ -2,7 +2,7 @@
 cookiecutter-pylibrary
 ======================
 
-Cookiecutter_ template for a Python python library. |travis| |appveyor| |requiresio|
+Cookiecutter_ template for a Python python library. |travis| |appveyor|
 
 .. |travis| image:: http://img.shields.io/travis/ionelmc/cookiecutter-pylibrary/master.svg?style=flat&label=Travis
     :alt: Travis-CI Build Status
@@ -11,10 +11,6 @@ Cookiecutter_ template for a Python python library. |travis| |appveyor| |require
 .. |appveyor| image:: https://img.shields.io/appveyor/ci/ionelmc/cookiecutter-pylibrary/master.svg?style=flat&label=AppVeyor
     :alt: AppVeyor Build Status
     :target: https://ci.appveyor.com/project/ionelmc/cookiecutter-pylibrary
-
-.. |requiresio| image:: https://requires.io/github/ionelmc/cookiecutter-pylibrary/requirements.svg?branch=master
-     :target: https://requires.io/github/ionelmc/cookiecutter-pylibrary/requirements/?branch=master
-     :alt: Requirements Status
 
 *Notes*:
 
@@ -399,12 +395,6 @@ You will be asked for these fields:
 
             "yes"
       - If you want the AppVeyor_ badge and configuration.
-
-    * - ``requiresio``
-      - .. code:: python
-
-            "yes"
-      - If you want the `requires.io`_ badge and configuration.
 
 The testing (``tox.ini`` and ``.travis.yml``) configuration is generated from templates. For your convenience there's an
 initial bootstrap ``tox.ini``, to get the initial generation going just run::

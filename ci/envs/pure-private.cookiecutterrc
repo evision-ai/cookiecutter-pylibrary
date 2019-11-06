@@ -11,15 +11,14 @@ default_context:
   command_line_interface: plain
   coveralls: 'yes'
   coveralls_token: IoRlAEvnKbwbhBJ2jrWPqzAnE2jobA0I3
-  full_name: "Ion\"'el Cristian M\u0103rie\u0219"
+  full_name: eVision.AI
   landscape: 'yes'
   linter: flake8
-  package_namespace: evision
   package_name: lib
-  project_name: "eVision Library"
-  repo_hosting_domain: github.com
+  package_namespace: evision
+  project_name: eVision Library
+  repo_hosting_domain: 'no'
   repo_name: evision-lib
-  requiresio: 'yes'
   scrutinizer: 'yes'
   setup_py_uses_setuptools_scm: 'no'
   setup_py_uses_test_runner: 'yes'

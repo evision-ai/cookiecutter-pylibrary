@@ -13,7 +13,6 @@ Overview
     * - tests
       - | {%- if cookiecutter.travis == 'yes' %} |travis|{% endif -%}
           {%- if cookiecutter.appveyor == 'yes' %} |appveyor|{% endif -%}
-          {%- if cookiecutter.requiresio == 'yes' %} |requires|{% endif -%}
         {{ '' }}
         | {%- if cookiecutter.coveralls == 'yes' %} |coveralls|{% endif -%}
           {%- if cookiecutter.codecov == 'yes' %} |codecov|{% endif -%}
@@ -52,11 +51,6 @@ Overview
 .. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}?branch=master&svg=true
     :alt: AppVeyor Build Status
     :target: https://ci.appveyor.com/project/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}
-{% endif %}
-{%- if cookiecutter.requiresio == 'yes' %}
-.. |requires| image:: https://requires.io/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/requirements.svg?branch=master
-    :alt: Requirements Status
-    :target: https://requires.io/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/requirements/?branch=master
 {% endif %}
 {%- if cookiecutter.coveralls == 'yes' %}
 .. |coveralls| image:: https://coveralls.io/repos/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/badge.svg?branch=master&service=github

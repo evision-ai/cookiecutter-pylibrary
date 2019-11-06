@@ -51,7 +51,6 @@
     "travis": ["no", "yes"],
     "travis_osx": ["no", "yes"],
     "appveyor": ["no", "yes"],
-    "requiresio": ["no", "yes"],
 
     "_extensions": ["jinja2_time.TimeExtension"]
 }
