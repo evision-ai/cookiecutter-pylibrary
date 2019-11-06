@@ -210,12 +210,6 @@ You will be asked for these fields:
 
         Note that ``test_matrix_separate_coverage == 'no'`` only works if you also have ``test_matrix_configurator == 'no'``.
 
-    * - ``test_runner``
-      - .. code:: python
-
-            "pytest"
-      - Test runner to use. Available options: ``pytest`` or ``nose``.
-
     * - ``linter``
       - .. code:: python
 

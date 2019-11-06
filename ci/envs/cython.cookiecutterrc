@@ -14,4 +14,3 @@ default_context:
   sphinx_docs: 'no'
   test_matrix_configurator: 'no'
   test_matrix_separate_coverage: 'no'
-  test_runner: pytest
