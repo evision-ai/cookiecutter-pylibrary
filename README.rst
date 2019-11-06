@@ -216,13 +216,6 @@ You will be asked for these fields:
             "pytest"
       - Test runner to use. Available options: ``pytest`` or ``nose``.
 
-    * - ``setup_py_uses_test_runner``
-      - .. code:: python
-
-            "no"
-      - Whether to use the test_runner for python setup.py test.
-        Note that this will also add to ``setup_requires`` if a test-runner is needed.
-
     * - ``linter``
       - .. code:: python
 

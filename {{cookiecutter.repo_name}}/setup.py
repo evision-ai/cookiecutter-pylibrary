@@ -157,7 +157,7 @@ setup(
         #   ':python_version=="2.6"': ['argparse'],
     },
 {%- set setup_requires_interior %}
-{%- if cookiecutter.test_runner == 'pytest' and cookiecutter.setup_py_uses_test_runner == 'yes' %}
+{%- if cookiecutter.test_runner == 'pytest' %}
         'pytest-runner',{% endif %}
 {%- endset %}
 {%- if cookiecutter.c_extension_support == 'cython' %}
