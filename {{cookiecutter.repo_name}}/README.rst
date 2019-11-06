@@ -23,16 +23,6 @@ You can also install the in-development version with::
     pip install git+ssh://git@{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}.git@master
 {%- endif %}
 
-Documentation
-=============
-
-To use the project:
-
-.. code-block:: python
-
-    import {{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}
-    {{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_function }}()
-
 Development
 ===========
 

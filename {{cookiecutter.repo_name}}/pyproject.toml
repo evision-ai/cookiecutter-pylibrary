@@ -3,9 +3,4 @@ requires = [
     "setuptools>=30.3.0",
     "wheel",
     "pytest-runner",
-{%- if cookiecutter.c_extension_support == 'cython' %}
-    "cython",
-{%- elif cookiecutter.c_extension_support == 'cffi' %}
-    "cffi>=1.0.0",
-{%- endif %}
 ]

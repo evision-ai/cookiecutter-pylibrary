@@ -14,6 +14,7 @@ slim-0.0.1 (2019-11-06)
 * Remove command line tools
 * Remove usages of ``test_matrix``
 * Default building ``sphinx_docs`` and ``sphinx_docs_test``
+* Use default author email
 
 v1.15 (2019-05-25)
 ------------------

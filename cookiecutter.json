@@ -1,6 +1,5 @@
 {
     "full_name": "eVision Awesome Project",
-    "email": "dev@evision.ai",
     "website": "https://evision.ai",
     "package_namespace": "evision",
     "package_name": "lib",
@@ -14,12 +13,6 @@
     "year_from": "2019",
     "year_to": "{% now 'utc+8', '%Y' %}",
     "version": "0.1.0",
-    "c_extension_support": ["no", "yes", "cffi", "cython"],
-    "c_extension_optional": ["no", "yes"],
-    "c_extension_module": "_{{ cookiecutter.package_namespace}}_{{ cookiecutter.package_name}}",
-    "c_extension_function": "longest",
-    "c_extension_test_pypi": ["no", "yes"],
-    "c_extension_test_pypi_username": "{{ cookiecutter.repo_username }}",
 
     "_extensions": ["jinja2_time.TimeExtension"]
 }

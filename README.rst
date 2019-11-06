@@ -88,14 +88,6 @@ You will be asked for these fields:
 
         Can be set in your ``~/.cookiecutterrc`` config file.
 
-    * - ``email``
-      - .. code:: python
-
-            "contact@ionelmc.ro"
-      - Contact email of the author (used in ``AUTHORS.rst`` and ``setup.py``).
-
-        Can be set in your ``~/.cookiecutterrc`` config file.
-
     * - ``website``
       - .. code:: python
 
@@ -166,34 +158,6 @@ You will be asked for these fields:
 
             "0.1.0"
       - Release version (see ``.bumpversion.cfg`` and in Sphinx ``conf.py``).
-
-    * - ``c_extension_support``
-      - .. code:: python
-
-            "no"
-      - .. _c_extension_support:
-
-        Support C extensions (will slighly change the outputted ``setup.py``). Available options:
-
-        * ``"yes"`` - to generate a Python C extension
-        * ``"cffi"`` - to generate CFFI bindings against a C library
-        * ``"cython"`` - to generate a Cython extension
-
-
-    * - ``c_extension_optional``
-      - .. code:: python
-
-            "no"
-      - Make C extensions optional (will allow your package to install even if extensions can't be compiled)
-    * - ``c_extension_test_pypi``
-      - .. code:: python
-
-            "no"
-      - Enables wheel publishing to https://test.pypi.org/ by using `tox-wheel <https://pypi.org/project/tox-wheel/>`_
-        and `manylinux1 <https://hub.docker.com/r/ionelmc/manylinux>`_.
-
-        You should only use this with ``c_extension_support``. If your project produces universal wheels this won't work
-        well.
 
 The testing (``tox.ini``) configuration is generated from templates. For your convenience there's an
 initial bootstrap ``tox.ini``, to get the initial generation going just run::

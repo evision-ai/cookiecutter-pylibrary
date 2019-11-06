@@ -26,24 +26,6 @@ def unlink_if_exists(path):
         os.unlink(path)
 
 if __name__ == "__main__":
-{%- if cookiecutter.c_extension_support == 'no' %}
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}.c'))
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}.pyx'))
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}_build.py'))
-{%- elif cookiecutter.c_extension_support == 'cffi' %}
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}.pyx'))
-{%- elif cookiecutter.c_extension_support == 'cython' %}
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}.c'))
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}_build.py'))
-    try:
-        subprocess.check_call(['tox', '-e', 'cythonize'])
-    except Exception:
-        subprocess.check_call([sys.executable, '-mtox', '-e', 'cythonize'])
-{%- else %}
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}.pyx'))
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}_build.py'))
-{%- endif %}
-
 {%- if cookiecutter.repo_hosting == 'no' %}
     os.unlink('CONTRIBUTING.rst')
 {% endif %}
@@ -65,7 +47,7 @@ if __name__ == "__main__":
 ################################################################################
 ################################################################################
 
-    You have succesfully created `{{ cookiecutter.repo_name }}`.
+    You have successfully created `{{ cookiecutter.repo_name }}`.
 
 ################################################################################
 
@@ -87,12 +69,3 @@ if __name__ == "__main__":
         git remote add origin git@{{ cookiecutter.repo_hosting_domain }}:{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}.git
         git push -u origin master
 """)
-
-{%- if cookiecutter.c_extension_test_pypi == 'yes' %}
-    note("""
-NOTE:
-
-    You are using the c_extension_test_pypi option.
-""")
-{%- endif %}
-
