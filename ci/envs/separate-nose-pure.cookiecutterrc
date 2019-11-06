@@ -25,4 +25,3 @@ default_context:
   test_matrix_configurator: 'no'
   test_matrix_separate_coverage: 'yes'
   test_runner: nose
-  travis_osx: no yes

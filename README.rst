@@ -2,11 +2,7 @@
 cookiecutter-pylibrary
 ======================
 
-Cookiecutter_ template for a Python python library. |travis|
-
-.. |travis| image:: http://img.shields.io/travis/ionelmc/cookiecutter-pylibrary/master.svg?style=flat&label=Travis
-    :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/ionelmc/cookiecutter-pylibrary
+Cookiecutter_ template for a Python python library
 
 *Notes*:
 
@@ -31,7 +27,6 @@ This is an "all inclusive" sort of template.
 * Tox_ for managing test environments for Python 2.7, 3.3, PyPy etc.
 * Pytest_ or Nose_ for testing Python 2.7, 3.3, PyPy etc.
 * *Optional* support for creating a tests matrix out of dependencies and python versions.
-* Travis-CI_ and AppVeyor_ for continuous testing.
 * Coveralls_ or Codecov_ for coverage tracking (using Tox_).
 * Documentation with Sphinx_, ready for ReadTheDocs_.
 * Configurations for:
@@ -373,26 +368,13 @@ You will be asked for these fields:
       - If you specifically want to be sure your package will never be
         accidentally uploaded to PyPI, you can pick "yes".
 
-    * - ``travis``
-      - .. code:: python
 
-            "yes"
-      - If you want the Travis-CI_ badge and configuration.
-    * - ``travis_osx``
-      - .. code:: python
-
-            "no"
-      - Enables OSX support in the Travis-CI_ configuration. To keep things simple and easy to understand only Brew
-        Python 2 and 3 will be used.
-
-        You probably want to enable this if you use ``c_extension_test_pypi == 'yes'``.
-
-The testing (``tox.ini`` and ``.travis.yml``) configuration is generated from templates. For your convenience there's an
+The testing (``tox.ini``) configuration is generated from templates. For your convenience there's an
 initial bootstrap ``tox.ini``, to get the initial generation going just run::
 
   tox
 
-You can later regenerate ``tox.ini`` and ``.travis.yml`` by running (if you enabled the ``test_matrix_configurator``
+You can later regenerate ``tox.ini`` by running (if you enabled the ``test_matrix_configurator``
 option)::
 
   tox -e bootstrap
@@ -408,7 +390,6 @@ project)::
 
 Then:
 
-* `Enable the repository in your Travis CI account <https://travis-ci.org/profile>`_.
 * `Enable the repository in your Coveralls account <https://coveralls.io/repos/new>`_.
 * `Add the repo to your ReadTheDocs account <https://readthedocs.org/dashboard/import/>`_ + turn on the ReadTheDocs
   service hook. Don't forget to enable virtualenv and specify ``docs/requirements.txt`` as the requirements file in
@@ -530,7 +511,6 @@ No way, this is the best. :stuck_out_tongue_winking_eye:
 
 If you have criticism or suggestions please open up an Issue or Pull Request.
 
-.. _Travis-CI: http://travis-ci.org/
 .. _Tox: https://tox.readthedocs.io/en/latest/
 .. _Sphinx: http://sphinx-doc.org/
 .. _Coveralls: https://coveralls.io/

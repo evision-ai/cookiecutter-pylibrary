@@ -83,11 +83,6 @@ if __name__ == "__main__":
     os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}_build.py'))
 {%- endif %}
 
-{%- if cookiecutter.travis == 'no' %}
-    os.unlink(join('ci', 'templates', '.travis.yml'))
-    unlink_if_exists('.travis.yml')
-{% endif %}
-
 {%- if cookiecutter.repo_hosting == 'no' %}
     os.unlink('CONTRIBUTING.rst')
 {% endif %}
@@ -140,16 +135,14 @@ if __name__ == "__main__":
         git push -u origin master
 
 {% if cookiecutter.test_matrix_configurator == "yes" %}
-    To regenerate your tox.ini, .travis.yml or run:
-{% else %}
-    To regenerate your .travis.yml run:
-{% endif %}
+    To regenerate your tox.ini run:
 
         tox -e bootstrap
 
     You can also run:
 
         ./ci/bootstrap.py
+{% endif %}
 
 """)
 
@@ -158,9 +151,6 @@ if __name__ == "__main__":
 NOTE:
 
     You are using the c_extension_test_pypi option.
-
-    Make sure you are setting TWINE_PASSWORD as a secret env variable in CI settings:
-    - https://travis-ci.org/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/settings
 """)
 {%- endif %}
 

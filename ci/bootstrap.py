@@ -49,7 +49,6 @@ if __name__ == "__main__":
         conf['repo_name'] = 'evision-lib'
         conf['package_namespace'] = 'evision'
         conf['package_name'] = 'lib'
-        conf['c_extension_test_pypi_travis_secret'] = ''
         conf['codacy'] = 'yes'
         conf['codacy_projectid'] = '862e7946'
         conf['eabb4112be6503a667381b71'] = ''

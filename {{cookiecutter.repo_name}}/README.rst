@@ -11,9 +11,7 @@ Overview
       - |docs|
 {%- endif %}
     * - tests
-      - | {%- if cookiecutter.travis == 'yes' %} |travis|{% endif -%}
-        {{ '' }}
-        | {%- if cookiecutter.coveralls == 'yes' %} |coveralls|{% endif -%}
+      - | {%- if cookiecutter.coveralls == 'yes' %} |coveralls|{% endif -%}
           {%- if cookiecutter.codecov == 'yes' %} |codecov|{% endif -%}
         {{ '' }}
         {%- if cookiecutter.landscape == 'yes' or cookiecutter.scrutinizer == 'yes' or cookiecutter.codacy == 'yes' or cookiecutter.codeclimate == 'yes' %}
@@ -40,11 +38,6 @@ Overview
     :target: https://{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name|replace('.', '') }}/commits/master
     :alt: Documentation Status
 {% endif %}
-{% endif %}
-{%- if cookiecutter.travis == 'yes' %}
-.. |travis| image:: https://api.travis-ci.org/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}.svg?branch=master
-    :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}
 {% endif %}
 {%- if cookiecutter.coveralls == 'yes' %}
 .. |coveralls| image:: https://coveralls.io/repos/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/badge.svg?branch=master&service=github

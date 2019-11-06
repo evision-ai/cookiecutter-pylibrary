@@ -1,6 +1,6 @@
 default_context:
   c_extension_optional: 'no'
-  c_extension_support: cffi
+  c_extension_support: 'yes'
   c_extension_test_pypi: 'yes'
   c_extension_test_pypi_username: ionel
   codacy: 'yes'
@@ -25,4 +25,3 @@ default_context:
   test_matrix_configurator: 'no'
   test_matrix_separate_coverage: 'yes'
   test_runner: pytest
-  travis_osx: 'yes'

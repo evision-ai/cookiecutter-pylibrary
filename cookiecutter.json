@@ -48,8 +48,6 @@
     "sphinx_theme": ["sphinx-py3doc-enhanced-theme", "sphinx-rtd-theme"],
     "sphinx_doctest": ["yes", "no"],
     "sphinx_docs_hosting": "https://{{ cookiecutter.repo_name|replace('.', '') }}.readthedocs.io/",
-    "travis": ["no", "yes"],
-    "travis_osx": ["no", "yes"],
 
     "_extensions": ["jinja2_time.TimeExtension"]
 }
