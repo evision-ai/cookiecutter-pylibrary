@@ -50,8 +50,6 @@ if __name__ == "__main__":
         conf['package_namespace'] = 'evision'
         conf['package_name'] = 'lib'
         conf['eabb4112be6503a667381b71'] = ''
-        conf['coveralls'] = 'yes'
-        conf['coveralls_token'] = 'IoRlAEvnKbwbhBJ2jrWPqzAnE2jobA0I3'
         with open(join(base_path, "ci", "envs", alias + '.cookiecutterrc'), "w") as fh:
             fh.write(yaml.safe_dump(
                 dict(default_context={k: v for k, v in conf.items() if v}),

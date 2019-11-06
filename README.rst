@@ -280,12 +280,6 @@ You will be asked for these fields:
 
         What license to pick? https://choosealicense.com/
 
-    * - ``coveralls``
-      - .. code:: python
-
-            "no"
-      - Enable pushing coverage data to Coveralls_ and add badge in ``README.rst``.
-
     * - ``sphinx_docs``
       - .. code:: python
 
@@ -356,7 +350,6 @@ project)::
 
 Then:
 
-* `Enable the repository in your Coveralls account <https://coveralls.io/repos/new>`_.
 * `Add the repo to your ReadTheDocs account <https://readthedocs.org/dashboard/import/>`_ + turn on the ReadTheDocs
   service hook. Don't forget to enable virtualenv and specify ``docs/requirements.txt`` as the requirements file in
   `Advanced Settings`.
@@ -479,7 +472,6 @@ If you have criticism or suggestions please open up an Issue or Pull Request.
 
 .. _Tox: https://tox.readthedocs.io/en/latest/
 .. _Sphinx: http://sphinx-doc.org/
-.. _Coveralls: https://coveralls.io/
 .. _ReadTheDocs: https://readthedocs.org/
 .. _Setuptools: https://pypi.org/project/setuptools
 .. _Pytest: http://pytest.org/

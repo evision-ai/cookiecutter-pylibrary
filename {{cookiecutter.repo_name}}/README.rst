@@ -10,9 +10,6 @@ Overview
     * - docs
       - |docs|
 {%- endif %}
-    * - tests
-      - | {%- if cookiecutter.coveralls == 'yes' %} |coveralls|{% endif -%}
-        {%- endif -%}
 {{ '' }}
 {%- if cookiecutter.pypi_badge == "yes" or cookiecutter.repo_hosting_domain == "github.com" %}
     * - package
@@ -31,11 +28,6 @@ Overview
     :target: https://{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name|replace('.', '') }}/commits/master
     :alt: Documentation Status
 {% endif %}
-{% endif %}
-{%- if cookiecutter.coveralls == 'yes' %}
-.. |coveralls| image:: https://coveralls.io/repos/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/badge.svg?branch=master&service=github
-    :alt: Coverage Status
-    :target: https://coveralls.io/r/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}
 {% endif %}
 {%- if cookiecutter.pypi_badge == "yes" %}
 .. |version| image:: https://img.shields.io/pypi/v/{{ cookiecutter.distribution_name }}.svg
