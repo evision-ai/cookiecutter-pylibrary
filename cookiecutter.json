@@ -43,7 +43,6 @@
     "scrutinizer": ["no", "yes"],
     "codacy" : ["no", "yes"],
     "codacy_projectid" : "[Get ID from https://app.codacy.com/app/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/settings]",
-    "codeclimate" : ["no", "yes"],
     "sphinx_docs": ["yes", "no"],
     "sphinx_theme": ["sphinx-py3doc-enhanced-theme", "sphinx-rtd-theme"],
     "sphinx_doctest": ["yes", "no"],

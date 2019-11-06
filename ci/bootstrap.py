@@ -52,7 +52,6 @@ if __name__ == "__main__":
         conf['codacy'] = 'yes'
         conf['codacy_projectid'] = '862e7946'
         conf['eabb4112be6503a667381b71'] = ''
-        conf['codeclimate'] = 'yes'
         conf['codecov'] = 'yes'
         conf['coveralls'] = 'yes'
         conf['coveralls_token'] = 'IoRlAEvnKbwbhBJ2jrWPqzAnE2jobA0I3'

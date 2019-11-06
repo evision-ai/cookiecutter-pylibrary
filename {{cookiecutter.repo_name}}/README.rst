@@ -14,11 +14,10 @@ Overview
       - | {%- if cookiecutter.coveralls == 'yes' %} |coveralls|{% endif -%}
           {%- if cookiecutter.codecov == 'yes' %} |codecov|{% endif -%}
         {{ '' }}
-        {%- if cookiecutter.landscape == 'yes' or cookiecutter.scrutinizer == 'yes' or cookiecutter.codacy == 'yes' or cookiecutter.codeclimate == 'yes' %}
+        {%- if cookiecutter.landscape == 'yes' or cookiecutter.scrutinizer == 'yes' or cookiecutter.codacy == 'yes' %}
         | {%- if cookiecutter.landscape == 'yes' %} |landscape|{% endif -%}
           {%- if cookiecutter.scrutinizer == 'yes' %} |scrutinizer|{% endif -%}
           {%- if cookiecutter.codacy == 'yes' %} |codacy|{% endif -%}
-          {%- if cookiecutter.codeclimate == 'yes' %} |codeclimate|{% endif -%}
         {%- endif -%}
 {{ '' }}
 {%- if cookiecutter.pypi_badge == "yes" or cookiecutter.repo_hosting_domain == "github.com" %}
@@ -58,11 +57,6 @@ Overview
 .. |codacy| image:: https://img.shields.io/codacy/grade/{{ cookiecutter.codacy_projectid }}.svg
     :target: https://www.codacy.com/app/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}
     :alt: Codacy Code Quality Status
-{% endif %}
-{%- if cookiecutter.codeclimate == 'yes' %}
-.. |codeclimate| image:: https://codeclimate.com/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/badges/gpa.svg
-   :target: https://codeclimate.com/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}
-   :alt: CodeClimate Quality Status
 {% endif %}
 {%- if cookiecutter.pypi_badge == "yes" %}
 .. |version| image:: https://img.shields.io/pypi/v/{{ cookiecutter.distribution_name }}.svg

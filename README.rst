@@ -314,11 +314,6 @@ You will be asked for these fields:
 
         **Note:** After importing the project in Codacy, find the hexadecimal project ID from settings and replace it in badge URL
 
-    * - ``codeclimate``
-      - .. code:: python
-
-            "no"
-      - Add a CodeClimate_ badge in ``README.rst``.
 
     * - ``sphinx_docs``
       - .. code:: python
@@ -525,4 +520,3 @@ If you have criticism or suggestions please open up an Issue or Pull Request.
 .. _Landscape: https://landscape.io/
 .. _Scrutinizer: https://scrutinizer-ci.com/
 .. _Codacy: https://codacy.com/
-.. _CodeClimate: https://codeclimate.com/
