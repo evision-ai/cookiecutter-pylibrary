@@ -1,8 +1,4 @@
 default_context:
-  c_extension_optional: 'no'
-  c_extension_support: 'no'
-  c_extension_test_pypi: 'no'
-  c_extension_test_pypi_username: ionel
   full_name: eVision.AI
   package_name: lib
   package_namespace: evision
