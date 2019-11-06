@@ -24,7 +24,7 @@ matrix:
 {{ "{%- for env in tox_environments %}{{ '' }}" }}
 {%- endif %}
 {%- if cookiecutter.travis_osx == "yes" %}
-{{ "{%- if 'py37' in env or 'py27' in env %}{{ '' }}" }}
+{{ "{%- if 'py3' in env or 'py27' in env %}{{ '' }}" }}
 {{ "    - os: osx" }}
 {{ "      language: generic" }}
 {{ "      env:" }}

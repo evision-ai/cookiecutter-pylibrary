@@ -1,4 +1,4 @@
-#!/usr/bin/python3.6
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, print_function, unicode_literals
 
@@ -22,9 +22,9 @@ if __name__ == "__main__":
         import subprocess
         print("Making bootstrap env in: {0} ...".format(env_path))
         try:
-            subprocess.check_call(["virtualenv", env_path, '--python=python3.6'])
+            subprocess.check_call(["virtualenv", env_path, '--python=python3'])
         except Exception:
-            subprocess.check_call([sys.executable, "-m", "virtualenv", env_path, '--python=python3.6'])
+            subprocess.check_call([sys.executable, "-m", "virtualenv", env_path, '--python=python3'])
         print("Installing `jinja2` and `matrix` into bootstrap environment ...")
         subprocess.check_call([join(bin_path, "pip"), "install", "jinja2", "matrix", "pyyaml"])
     activate = join(bin_path, "activate_this.py")
@@ -59,7 +59,6 @@ if __name__ == "__main__":
         conf['coveralls'] = 'yes'
         conf['coveralls_token'] = 'IoRlAEvnKbwbhBJ2jrWPqzAnE2jobA0I3'
         conf['landscape'] = 'yes'
-        conf['requiresio'] = 'yes'
         conf['scrutinizer'] = 'yes'
         with open(join(base_path, "ci", "envs", alias + '.cookiecutterrc'), "w") as fh:
             fh.write(yaml.safe_dump(
