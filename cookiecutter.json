@@ -26,7 +26,6 @@
     "test_runner": ["pytest", "nose"],
     "setup_py_uses_test_runner": ["no", "yes"],
     "setup_py_uses_setuptools_scm": ["no", "yes"],
-    "allow_tests_inside_package": ["yes", "no"],
     "linter": ["flake8", "pylama"],
     "command_line_interface": ["argparse", "plain", "click", "no"],
     "command_line_interface_bin_name": "{{ cookiecutter.distribution_name }}",
