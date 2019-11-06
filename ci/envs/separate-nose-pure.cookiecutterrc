@@ -3,7 +3,6 @@ default_context:
   c_extension_support: 'no'
   c_extension_test_pypi: 'no'
   c_extension_test_pypi_username: ionel
-  codecov: 'yes'
   command_line_interface: plain
   coveralls: 'yes'
   coveralls_token: IoRlAEvnKbwbhBJ2jrWPqzAnE2jobA0I3

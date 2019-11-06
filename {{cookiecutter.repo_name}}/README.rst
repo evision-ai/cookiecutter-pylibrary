@@ -12,7 +12,6 @@ Overview
 {%- endif %}
     * - tests
       - | {%- if cookiecutter.coveralls == 'yes' %} |coveralls|{% endif -%}
-          {%- if cookiecutter.codecov == 'yes' %} |codecov|{% endif -%}
         {%- endif -%}
 {{ '' }}
 {%- if cookiecutter.pypi_badge == "yes" or cookiecutter.repo_hosting_domain == "github.com" %}
@@ -37,11 +36,6 @@ Overview
 .. |coveralls| image:: https://coveralls.io/repos/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/badge.svg?branch=master&service=github
     :alt: Coverage Status
     :target: https://coveralls.io/r/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}
-{% endif %}
-{%- if cookiecutter.codecov == 'yes' %}
-.. |codecov| image:: https://codecov.io/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/coverage.svg?branch=master
-    :alt: Coverage Status
-    :target: https://codecov.io/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}
 {% endif %}
 {%- if cookiecutter.pypi_badge == "yes" %}
 .. |version| image:: https://img.shields.io/pypi/v/{{ cookiecutter.distribution_name }}.svg

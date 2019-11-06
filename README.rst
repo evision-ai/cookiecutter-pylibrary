@@ -286,14 +286,6 @@ You will be asked for these fields:
             "no"
       - Enable pushing coverage data to Coveralls_ and add badge in ``README.rst``.
 
-    * - ``codecov``
-      - .. code:: python
-
-            "yes"
-      - Enable pushing coverage data to Codecov_ and add badge in ``README.rst``.
-
-        **Note:** Doesn't support pushing C extension coverage yet.
-
     * - ``sphinx_docs``
       - .. code:: python
 
@@ -495,4 +487,3 @@ If you have criticism or suggestions please open up an Issue or Pull Request.
 .. _Nose: http://nose.readthedocs.org/
 .. _isort: https://pypi.org/project/isort
 .. _bumpversion: https://pypi.org/project/bumpversion
-.. _Codecov: http://codecov.io/

@@ -6,7 +6,8 @@ Use cookiecutter's ``--checkout`` options to use a specific version.
 slim-0.0.1 (2019-11-06)
 -----------------------
 
-* Remove usages of ``requiresio``, ``appveyor``
+* Remove usages of ``requiresio``, ``appveyor``, ``travis``, ``codeclimate``
+* Remove usages of ``scrutinizer``, ``codacy``, ``landscape``, ``codecov``
 
 v1.15 (2019-05-25)
 ------------------
