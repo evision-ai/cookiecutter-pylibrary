@@ -13,9 +13,6 @@ Overview
     * - tests
       - | {%- if cookiecutter.coveralls == 'yes' %} |coveralls|{% endif -%}
           {%- if cookiecutter.codecov == 'yes' %} |codecov|{% endif -%}
-        {{ '' }}
-        {%- if cookiecutter.landscape == 'yes' %}
-        | {%- if cookiecutter.landscape == 'yes' %} |landscape|{% endif -%}
         {%- endif -%}
 {{ '' }}
 {%- if cookiecutter.pypi_badge == "yes" or cookiecutter.repo_hosting_domain == "github.com" %}
@@ -45,11 +42,6 @@ Overview
 .. |codecov| image:: https://codecov.io/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/coverage.svg?branch=master
     :alt: Coverage Status
     :target: https://codecov.io/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}
-{% endif %}
-{%- if cookiecutter.landscape == 'yes' %}
-.. |landscape| image:: https://landscape.io/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/master/landscape.svg?style=flat
-    :target: https://landscape.io/github/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/master
-    :alt: Code Quality Status
 {% endif %}
 {%- if cookiecutter.pypi_badge == "yes" %}
 .. |version| image:: https://img.shields.io/pypi/v/{{ cookiecutter.distribution_name }}.svg

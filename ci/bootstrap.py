@@ -53,7 +53,6 @@ if __name__ == "__main__":
         conf['codecov'] = 'yes'
         conf['coveralls'] = 'yes'
         conf['coveralls_token'] = 'IoRlAEvnKbwbhBJ2jrWPqzAnE2jobA0I3'
-        conf['landscape'] = 'yes'
         with open(join(base_path, "ci", "envs", alias + '.cookiecutterrc'), "w") as fh:
             fh.write(yaml.safe_dump(
                 dict(default_context={k: v for k, v in conf.items() if v}),

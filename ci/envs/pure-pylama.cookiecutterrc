@@ -8,7 +8,6 @@ default_context:
   coveralls: 'yes'
   coveralls_token: IoRlAEvnKbwbhBJ2jrWPqzAnE2jobA0I3
   full_name: eVision.AI
-  landscape: 'yes'
   linter: pylama
   package_name: lib
   package_namespace: evision
