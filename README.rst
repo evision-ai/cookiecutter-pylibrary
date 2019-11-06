@@ -194,21 +194,6 @@ You will be asked for these fields:
 
         You should only use this with ``c_extension_support``. If your project produces universal wheels this won't work
         well.
-    * - ``test_matrix_configurator``
-      - .. code:: python
-
-            "no"
-      - Enable the test matrix generator script. If you don't have a huge number of test environments then probably you
-        don't need this.
-
-    * - ``test_matrix_separate_coverage``
-      - .. code:: python
-
-            "no"
-      - Enable this to have a separate env for measuring coverage. Indicated if you want to run doctests or collect tests
-        from ``src`` with pytest.
-
-        Note that ``test_matrix_separate_coverage == 'no'`` only works if you also have ``test_matrix_configurator == 'no'``.
 
     * - ``sphinx_docs``
       - .. code:: python
@@ -230,8 +215,7 @@ You will be asked for these fields:
       - .. code:: python
 
             "no"
-      - Set to ``"yes"`` if you want to enable doctesting in the `docs` environment. Works best with
-        ``test_matrix_separate_coverage == 'no'``.
+      - Set to ``"yes"`` if you want to enable doctesting in the `docs` environment.
 
         Read more about `doctest support in Sphinx <http://www.sphinx-doc.org/en/stable/ext/doctest.html>`_.
 
@@ -248,11 +232,6 @@ The testing (``tox.ini``) configuration is generated from templates. For your co
 initial bootstrap ``tox.ini``, to get the initial generation going just run::
 
   tox
-
-You can later regenerate ``tox.ini`` by running (if you enabled the ``test_matrix_configurator``
-option)::
-
-  tox -e bootstrap
 
 After this you can create the initial repository (make sure you `create <https://github.com/new>`_ an *empty* Github
 project)::

@@ -26,35 +26,8 @@ def unlink_if_exists(path):
         os.unlink(path)
 
 if __name__ == "__main__":
-{%- if cookiecutter.c_extension_test_pypi == 'yes' %}
-{%- if cookiecutter.test_matrix_separate_coverage == 'no' %}
-    warn("TODO: c_extension_test_pypi=yes will not work with test_matrix_separate_coverage=no for now.")
-    sys.exit(1)
-{%- endif %}
-{%- if cookiecutter.c_extension_support == 'no' %}
-    warn("""
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!                                                                            !!
-!!      ERROR:                                                                !!
-!!                                                                            !!
-!!          c_extension_test_pypi=yes is designed to build and publish        !!
-!!          platform-specific wheels.                                         !!
-!!                                                                            !!
-!!          You have set c_extension_support=no, and that will make every     !!
-!!          test environment publish duplicated universal wheels.             !!
-!!                                                                            !!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-""")
-    sys.exit(1)
-{%- endif %}
-{%- endif %}
-
 {% if cookiecutter.sphinx_docs == "no" %}
     shutil.rmtree('docs')
-{% endif %}
-
-{%- if cookiecutter.test_matrix_configurator == 'no' %}
-    os.unlink(join('ci', 'templates', 'tox.ini'))
 {% endif %}
 
 {%- if cookiecutter.c_extension_support == 'no' %}
@@ -117,17 +90,6 @@ if __name__ == "__main__":
         git commit -m "Add initial project skeleton."
         git remote add origin git@{{ cookiecutter.repo_hosting_domain }}:{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}.git
         git push -u origin master
-
-{% if cookiecutter.test_matrix_configurator == "yes" %}
-    To regenerate your tox.ini run:
-
-        tox -e bootstrap
-
-    You can also run:
-
-        ./ci/bootstrap.py
-{% endif %}
-
 """)
 
 {%- if cookiecutter.c_extension_test_pypi == 'yes' %}

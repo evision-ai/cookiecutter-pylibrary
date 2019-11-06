@@ -11,6 +11,8 @@ slim-0.0.1 (2019-11-06)
 * Remove ``license`` option
 * Use ``pytest`` as default tests runner
 * Use ``flake8`` as default linter
+* Remove command line tools
+* Remove usages of ``test_matrix``
 
 v1.15 (2019-05-25)
 ------------------
