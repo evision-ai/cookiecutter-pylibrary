@@ -5,7 +5,6 @@ default_context:
   c_extension_test_pypi_username: ionel
   command_line_interface: plain
   full_name: eVision.AI
-  linter: flake8
   package_name: lib
   package_namespace: evision
   project_name: eVision Library

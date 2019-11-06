@@ -210,12 +210,6 @@ You will be asked for these fields:
 
         Note that ``test_matrix_separate_coverage == 'no'`` only works if you also have ``test_matrix_configurator == 'no'``.
 
-    * - ``linter``
-      - .. code:: python
-
-        "flake8"
-      - Linter to use for ``tox -e check``. Available options: ``flake8`` or ``pylama``
-
     * - ``command_line_interface``
       - .. code:: python
 

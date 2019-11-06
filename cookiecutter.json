@@ -22,7 +22,6 @@
     "c_extension_test_pypi_username": "{{ cookiecutter.repo_username }}",
     "test_matrix_configurator": ["no", "yes"],
     "test_matrix_separate_coverage": ["no", "yes"],
-    "linter": ["flake8", "pylama"],
     "command_line_interface": ["argparse", "plain", "click", "no"],
     "command_line_interface_bin_name": "{{ cookiecutter.distribution_name }}",
     "sphinx_docs": ["yes", "no"],

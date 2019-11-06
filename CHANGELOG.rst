@@ -9,6 +9,8 @@ slim-0.0.1 (2019-11-06)
 * Remove usages of ``requiresio``, ``appveyor``, ``travis``, ``codeclimate``
 * Remove usages of ``scrutinizer``, ``codacy``, ``landscape``, ``codecov``
 * Remove ``license`` option
+* Use ``pytest`` as default tests runner
+* Use ``flake8`` as default linter
 
 v1.15 (2019-05-25)
 ------------------
