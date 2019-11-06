@@ -210,23 +210,6 @@ You will be asked for these fields:
 
         Note that ``test_matrix_separate_coverage == 'no'`` only works if you also have ``test_matrix_configurator == 'no'``.
 
-    * - ``command_line_interface``
-      - .. code:: python
-
-            "plain"
-      - Option to enable a CLI (a bin/executable file). Available options:
-
-        * ``plain`` - a very simple command.
-        * ``argparse`` - a command implemented with ``argparse``.
-        * ``click`` - a command implemented with `click <http://click.pocoo.org/>`_ - which you can use to build more complex commands.
-        * ``no`` - no CLI at all.
-
-    * - ``command_line_interface_bin_name``
-      - .. code:: python
-
-            "nameless"
-      - Name of the CLI bin/executable file (set the console script name in ``setup.py``).
-
     * - ``sphinx_docs``
       - .. code:: python
 

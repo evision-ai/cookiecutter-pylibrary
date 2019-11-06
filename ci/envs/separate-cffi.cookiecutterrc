@@ -3,7 +3,6 @@ default_context:
   c_extension_support: cffi
   c_extension_test_pypi: 'no'
   c_extension_test_pypi_username: ionel
-  command_line_interface: plain
   full_name: eVision.AI
   package_name: lib
   package_namespace: evision

@@ -143,9 +143,6 @@ setup(
     ],
     python_requires='!=2.*, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*',
     install_requires=[
-{%- if cookiecutter.command_line_interface == 'click' %}
-        'click',
-{%- endif %}
 {%- if cookiecutter.c_extension_support == 'cffi' %}
         'cffi>=1.0.0',
 {%- endif %}
@@ -176,13 +173,6 @@ setup(
     setup_requires=[{{ setup_requires_interior }}
     ],
 {%- endif -%}
-{%- if cookiecutter.command_line_interface != 'no' %}
-    entry_points={
-        'console_scripts': [
-            '{{ cookiecutter.command_line_interface_bin_name }} = {{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}.cli:main',
-        ]
-    },
-{%- endif %}
 {%- if cookiecutter.c_extension_support != 'no' -%}
 {%- if cookiecutter.c_extension_optional == 'yes' %}
     cmdclass={'build_ext': optional_build_ext},

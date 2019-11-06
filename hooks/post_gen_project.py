@@ -53,11 +53,6 @@ if __name__ == "__main__":
     shutil.rmtree('docs')
 {% endif %}
 
-{%- if cookiecutter.command_line_interface == 'no' %}
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '__main__.py'))
-    os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', 'cli.py'))
-{% endif %}
-
 {%- if cookiecutter.test_matrix_configurator == 'no' %}
     os.unlink(join('ci', 'templates', 'tox.ini'))
 {% endif %}
@@ -143,33 +138,3 @@ NOTE:
 """)
 {%- endif %}
 
-    command_line_interface_bin_name = '{{ cookiecutter.command_line_interface_bin_name }}'
-    while command_line_interface_bin_name.endswith('.py'):
-        command_line_interface_bin_name = command_line_interface_bin_name[:-3]
-
-        if command_line_interface_bin_name == '{{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}':
-            warn("""
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!                                                                            !!
-!!      ERROR:                                                                !!
-!!                                                                            !!
-!!          Your result package is broken. Your bin script named              !!
-!!          {0} !!
-!!                                                                            !!
-!!          Python automatically adds the location of scripts to              !!
-!!          `sys.path`. Because of that, the bin script will fail             !!
-!!          to import your package because it has the same name               !!
-!!          (it will try to import itself as a module).                       !!
-!!                                                                            !!
-!!          To avoid this problem you have two options:                       !!
-!!                                                                            !!
-!!          * Remove the ".py" suffix from the `command_line_interface_bin_name`.                    !!
-!!                                                                            !!
-!!          * Use a different `package_name` {1} !!
-!!                                                                            !!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-""".format(
-                '"{{ cookiecutter.command_line_interface_bin_name }}" will shadow your package.'.ljust(65),
-                '(not "{0}").'.format(command_line_interface_bin_name).ljust(32)))
-            sys.exit(1)
-        break
