@@ -4,25 +4,6 @@ Overview
 {% if cookiecutter.repo_hosting_domain == "github.com" %}
 .. start-badges
 
-.. list-table::
-    :stub-columns: 1
-{% if cookiecutter.sphinx_docs == "yes" %}
-    * - docs
-      - |docs|
-{%- endif %}
-{{ '' }}
-{%- if cookiecutter.sphinx_docs == "yes" -%}
-{%- if 'readthedocs' in cookiecutter.sphinx_docs_hosting -%}
-.. |docs| image:: https://readthedocs.org/projects/{{ cookiecutter.repo_name }}/badge/?style=flat
-    :target: https://readthedocs.org/projects/{{ cookiecutter.repo_name|replace('.', '') }}
-    :alt: Documentation Status
-{%- elif 'gitlab' in cookiecutter.sphinx_docs_hosting and 'gitlab' in cookiecutter.repo_hosting_domain -%}
-.. |docs| image:: https://{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/badges/master/pipeline.svg
-    :target: https://{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name|replace('.', '') }}/commits/master
-    :alt: Documentation Status
-{% endif %}
-{% endif %}
-
 .. end-badges
 {% endif %}
 {{ cookiecutter.project_short_description|wordwrap(119) }}
@@ -45,16 +26,12 @@ You can also install the in-development version with::
 Documentation
 =============
 
-{% if cookiecutter.sphinx_docs == "yes" %}
-{{ cookiecutter.sphinx_docs_hosting }}
-{% else %}
 To use the project:
 
 .. code-block:: python
 
     import {{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}
     {{ cookiecutter.package_namespace }}.{{ cookiecutter.package_name }}.{{ cookiecutter.c_extension_function }}()
-{% endif %}
 
 Development
 ===========

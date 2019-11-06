@@ -20,10 +20,6 @@
     "c_extension_function": "longest",
     "c_extension_test_pypi": ["no", "yes"],
     "c_extension_test_pypi_username": "{{ cookiecutter.repo_username }}",
-    "sphinx_docs": ["yes", "no"],
-    "sphinx_theme": ["sphinx-py3doc-enhanced-theme", "sphinx-rtd-theme"],
-    "sphinx_doctest": ["yes", "no"],
-    "sphinx_docs_hosting": "https://{{ cookiecutter.repo_name|replace('.', '') }}.readthedocs.io/",
 
     "_extensions": ["jinja2_time.TimeExtension"]
 }

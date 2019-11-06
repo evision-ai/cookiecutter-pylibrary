@@ -35,20 +35,12 @@ extlinks = {
     'pr': ('https://{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/pull/%s', 'PR #'),
 }
 
-{%- if cookiecutter.sphinx_theme != 'sphinx-rtd-theme' %}
-import {{ cookiecutter.sphinx_theme|replace('-', '_') }}
-html_theme = "{{ cookiecutter.sphinx_theme|replace('-', '_') }}"
-html_theme_path = [{{ cookiecutter.sphinx_theme|replace('-', '_') }}.get_html_theme_path()]
+import sphinx_py3doc_enhanced_theme
+html_theme = "sphinx_py3doc_enhanced_theme"
+html_theme_path = [sphinx_py3doc_enhanced_theme.get_html_theme_path()]
 html_theme_options = {
     'githuburl': 'https://{{ cookiecutter.repo_hosting_domain }}/{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}/'
 }
-{%- else %}
-# on_rtd is whether we are on readthedocs.org
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-
-if not on_rtd:  # only set the theme if we're building docs locally
-    html_theme = 'sphinx_rtd_theme'
-{%- endif %}
 
 html_use_smartypants = True
 html_last_updated_fmt = '%b %d, %Y'

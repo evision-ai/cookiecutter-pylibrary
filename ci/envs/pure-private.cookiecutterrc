@@ -9,4 +9,3 @@ default_context:
   project_name: eVision Library
   repo_hosting_domain: 'no'
   repo_name: evision-lib
-  sphinx_docs: 'no'

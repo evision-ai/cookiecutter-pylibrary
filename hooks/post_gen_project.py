@@ -26,10 +26,6 @@ def unlink_if_exists(path):
         os.unlink(path)
 
 if __name__ == "__main__":
-{% if cookiecutter.sphinx_docs == "no" %}
-    shutil.rmtree('docs')
-{% endif %}
-
 {%- if cookiecutter.c_extension_support == 'no' %}
     os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}.c'))
     os.unlink(join('src', '{{ cookiecutter.package_namespace }}', '{{ cookiecutter.package_name }}', '{{ cookiecutter.c_extension_module }}.pyx'))

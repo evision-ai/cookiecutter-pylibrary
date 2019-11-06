@@ -195,39 +195,6 @@ You will be asked for these fields:
         You should only use this with ``c_extension_support``. If your project produces universal wheels this won't work
         well.
 
-    * - ``sphinx_docs``
-      - .. code:: python
-
-            "yes"
-      - Have Sphinx documentation.
-
-    * - ``sphinx_theme``
-      - .. code:: python
-
-            "sphinx-rtd-theme"
-      - What Sphinx_ theme to use.
-
-        Suggested alternative: `sphinx-py3doc-enhanced-theme
-        <https://pypi.org/project/sphinx_py3doc_enhanced_theme>` for a responsive theme based on
-        the Python 3 documentation.
-
-    * - ``sphinx_doctest``
-      - .. code:: python
-
-            "no"
-      - Set to ``"yes"`` if you want to enable doctesting in the `docs` environment.
-
-        Read more about `doctest support in Sphinx <http://www.sphinx-doc.org/en/stable/ext/doctest.html>`_.
-
-    * - ``sphinx_docs_hosting``
-      - .. code:: python
-
-            "repo_name.readthedocs.io"
-      - Leave as default if your documentation will be hosted on readthedocs.
-        If your documentation will be hosted elsewhere (such as GitHub Pages or GitLab Pages),
-        enter the top-level URL.
-
-
 The testing (``tox.ini``) configuration is generated from templates. For your convenience there's an
 initial bootstrap ``tox.ini``, to get the initial generation going just run::
 
