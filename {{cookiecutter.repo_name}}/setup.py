@@ -25,6 +25,7 @@ def read(*names, **kwargs):
     ) as fh:
         return fh.read()
 
+
 setup(
     name='{{ cookiecutter.distribution_name }}',
     version='{{ cookiecutter.version }}',

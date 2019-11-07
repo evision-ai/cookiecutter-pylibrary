@@ -5,6 +5,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 import os
+import subprocess
 import sys
 from os.path import abspath
 from os.path import dirname
@@ -17,6 +18,7 @@ base_path = dirname(dirname(abspath(__file__)))
 def check_call(args):
     print("+", *args)
     subprocess.check_call(args)
+
 
 def exec_in_env():
     env_path = join(base_path, ".tox", "bootstrap")
@@ -56,6 +58,7 @@ def main():
         lstrip_blocks=True,
         keep_trailing_newline=True
     )
+
     tox_environments = [
         line.strip()
         # 'tox' need not be installed globally, but must be importable
@@ -66,11 +69,13 @@ def main():
         for line in subprocess.check_output([sys.executable, '-m', 'tox', '--listenvs'], universal_newlines=True).splitlines()
     ]
     tox_environments = [line for line in tox_environments if line.startswith('py')]
+
     for name in os.listdir(join("ci", "templates")):
         with open(join(base_path, name), "w") as fh:
             fh.write(jinja.get_template(name).render(tox_environments=tox_environments))
         print("Wrote {}".format(name))
     print("DONE.")
+
 
 if __name__ == "__main__":
     args = sys.argv[1:]

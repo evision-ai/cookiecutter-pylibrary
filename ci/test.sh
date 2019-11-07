@@ -20,9 +20,9 @@ echo "\033[1;36m================================\033[0m"
 set -x
 pwd
 cat ci/envs/$1.cookiecutterrc
-rm -rf python-nameless
+rm -rf evision-lib
 cookiecutter --no-input --config-file=ci/envs/$1.cookiecutterrc .
-cd python-nameless
+cd evision-lib
 git init .
 git add -A .
 git commit -m "Initial."
