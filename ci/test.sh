@@ -1,11 +1,6 @@
 #!/bin/bash -eux
 shopt -s xpg_echo
-
-if [[ -z "$1" ]]; then
-    echo Usage:
-    echo    $0 env-name
-    exit 1
-fi
+PROFILE=${1:-""}
 
 # A safer way to invoke 'sed', compensates for the difference between BSD and GNU sed.
 # https://stackoverflow.com/a/38595160/1950432
@@ -14,14 +9,14 @@ safe_sed () {
 }
 
 echo "\033[1;36m================================\033[0m"
-echo "\033[1;36m================================ Testing: $1\033[0m"
+echo "\033[1;36m================================ Testing: $PROFILE\033[0m"
 echo "\033[1;36m================================\033[0m"
 
 set -x
 pwd
-cat ci/envs/$1.cookiecutterrc
+cat ci/envs/$PROFILE.cookiecutterrc
 rm -rf evision-lib
-cookiecutter --no-input --config-file=ci/envs/$1.cookiecutterrc .
+cookiecutter --no-input --config-file=ci/envs/$PROFILE.cookiecutterrc .
 cd evision-lib
 git init .
 git add -A .
