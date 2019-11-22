@@ -30,18 +30,18 @@ if __name__ == "__main__":
     os.unlink('CONTRIBUTING.rst')
 {% endif %}
 
-    print("""
-################################################################################
-
-    Generating CI configuration ...
-""")
-    try:
-        subprocess.check_call(['tox', '-e', 'bootstrap'])
-    except Exception:
-        try:
-            subprocess.check_call([sys.executable, '-mtox', '-e', 'bootstrap'])
-        except Exception:
-            subprocess.check_call([sys.executable, join('ci', 'bootstrap.py')])
+#    print("""
+#################################################################################
+#
+#    Generating CI configuration ...
+#""")
+#    try:
+#        subprocess.check_call(['tox', '-e', 'bootstrap'])
+#    except Exception:
+#        try:
+#            subprocess.check_call([sys.executable, '-mtox', '-e', 'bootstrap'])
+#        except Exception:
+#            subprocess.check_call([sys.executable, join('ci', 'bootstrap.py')])
 
     print("""
 ################################################################################
