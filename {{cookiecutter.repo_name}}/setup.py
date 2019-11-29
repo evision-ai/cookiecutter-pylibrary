@@ -34,7 +34,7 @@ setup(
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
         re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
     ),
-    author={{ '{0!r}'.format(cookiecutter.full_name).lstrip('ub') }},
+    author='eVision.AI',
     author_email='dev@evision.ai',
 {%- if cookiecutter.repo_hosting_domain == "no" %}
     url='file://' + os.path.abspath(dirname(__file__)),
