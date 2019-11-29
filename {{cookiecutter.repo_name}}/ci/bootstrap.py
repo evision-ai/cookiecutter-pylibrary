@@ -70,10 +70,12 @@ def main():
     ]
     tox_environments = [line for line in tox_environments if line.startswith('py')]
 
-    for name in os.listdir(join("ci", "templates")):
-        with open(join(base_path, name), "w") as fh:
-            fh.write(jinja.get_template(name).render(tox_environments=tox_environments))
-        print("Wrote {}".format(name))
+    templates_dir = join("ci", "templates")
+    if os.path.exists(templates_dir):
+        for name in os.listdir(templates_dir):
+            with open(join(base_path, name), "w") as fh:
+                fh.write(jinja.get_template(name).render(tox_environments=tox_environments))
+            print("Wrote {}".format(name))
     print("DONE.")
 
 
